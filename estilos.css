@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: #b9b3b3;
+}
+
+:root {
+    --color-principal: #007bff;
+    --color-secundario: #007b94;
+    --color-fondo: #e6a0a0;
+    --color-texto: #000000;
+    --color-acento: #555;
+    --color-alterno: #ff0000;
+
+    --fuente-principal: "Segoe IU, tahoma, verdana";
+
+    --padding: 1rem;
+    --borde: 8px;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    grid-template-columns: auto;
+    min-height: 100vh;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "header        header      header"
+        "contenido     contenido   sidebar"
+        "contenido      contenido   sidebar"
+        "footer        footer      footer";
+
+}
+
+
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background-color:var(--color-fondo);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header {
+    background-color: #12203E;
+    color: #fff;
+    grid-area: header;
+}
+
+.contenedor .contenido {
+     grid-column: span 2;
+    grid-area: contenido;
+}
+
+.contenedor .sidebar {
+    background-color: #faa43d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+     grid-row: span 2; 
+    grid-area: sidebar;
+}
+
+.contenedor .footer {
+    background-color: #8f0808;
+    color: #fff;
+     grid-column: span 3;
+    grid-area: footer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "header       header      header"
+            "contenido     contenido   contenido"
+            "sidebar       sidebar     sidebar"
+            "footer        footer      footer";
+    }
+}
