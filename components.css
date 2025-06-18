@@ -1,0 +1,38 @@
+.header,
+.sidebar,
+.contenido,
+.footer {
+  background-color: var(--color-fondo);
+  padding: var(--espaciado);
+  border-radius: var(--borde-radio);
+}
+
+.header {
+  background-color: var(--color-principal);
+  color: white;
+}
+
+.sidebar {
+  background-color: var(--color-secundario);
+}
+
+.footer {
+  background-color: var(--color-principal);
+  color: white;
+  text-align: center;
+}
+
+.boton,
+.boton__descripcion {
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--borde-radio);
+  cursor: pointer;
+}
+
+
+
+
+

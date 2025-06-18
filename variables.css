@@ -1,0 +1,15 @@
+:root {
+    --color-principal: #007bff;
+    --color-secundario: #fff;
+    --color-fondo: #e6a0a0;
+    --color-texto: #000000;
+    --color-acento: #555;
+    --color-alterno: #ff0000;
+
+    --fuente-principal: "Segoe IU", tahoma, verdana;
+
+    --padding: 1rem;
+    --borde: 8px;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+
