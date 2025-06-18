@@ -1,5 +1,7 @@
-o Nombre del proyecto: Mi pop market
-o Captura del sitio:
+Nombre del proyecto: Mi pop market
+ 
+Captura del sitio:
 
-o Breve descripción: tienda de productos
-o Link a GitHub Pages: 
+Breve descripción: tienda de productos
+
+Link a GitHub Pages: 
