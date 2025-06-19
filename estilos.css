@@ -2,16 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    box-shadow: #b9b3b3;
 }
 
 :root {
-    --color-principal: #007bff;
-    --color-secundario: #007b94;
+    --color-principal: #af1313;
+    --color-secundario: #8f0808;
     --color-fondo: #e6a0a0;
     --color-texto: #000000;
-    --color-acento: #555;
-    --color-alterno: #ff0000;
+    --color-acento: #940404;
+    --color-alterno: #c94545;
 
     --fuente-principal: "Segoe IU, tahoma, verdana";
 
@@ -24,78 +23,137 @@ body {
     font-family: var(--fuente-principal);
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    display: grid;
-    grid-template-areas:
-        "header"
-        "nav"
-        "main"
-        "aside"
-        "footer";
-    grid-template-columns: auto;
     min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: start;
 }
 
 .contenedor {
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
+    min-height: auto;
     margin: 20px auto;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
+
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
 
     grid-template-areas: "header        header      header"
-        "contenido     contenido   sidebar"
-        "contenido      contenido   sidebar"
-        "footer        footer      footer";
+        "contenido     contenido                    sidebar"
+        "contenido      contenido                   sidebar"
+        "footer             footer                  footer";
 
 }
 
+
+.contenedor .header {
+    grid-area: auto;
+}
+
+.contenedor .contenido {
+    grid-area: auto;
+}
+
+.contenedor .sidebar {
+    grid-area: auto;
+}
+
+.contenedor .footer {
+    grid-area: auto;
+}
 
 .contenedor .header,
 .contenedor .contenido,
 .contenedor .sidebar,
 .contenedor .footer {
-    background-color:var(--color-fondo);
+    background-color: var(--color-fondo);
     padding: 20px;
-    border-radius: 4px;
+    border-radius: var(--borde);
+    box-shadow: var(--shadow);
 }
 
 .contenedor .header {
-    background-color: #12203E;
+    background-color: var(--color-principal);
     color: #fff;
     grid-area: header;
 }
 
-.contenedor .contenido {
-     grid-column: span 2;
-    grid-area: contenido;
+.header__titulo {
+    font-size: 2rem;
+}
+
+.contenedor .contenido h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor .contenido p {
+    margin-bottom: 1rem;
 }
 
 .contenedor .sidebar {
-    background-color: #faa43d;
-    text-align: center;
+    background-color: var(--color-alterno);
+    color: #fff;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100px;
-     grid-row: span 2; 
+    text-align: center;
     grid-area: sidebar;
 }
 
 .contenedor .footer {
-    background-color: #8f0808;
+    background-color:var(--color-secundario);
     color: #fff;
-     grid-column: span 3;
+    text-align: center;
     grid-area: footer;
 }
 
+.contenedor .footer__texto {
+    margin-bottom: 10px;
+}
+
+.boton__descripcion {
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--borde);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+boton__descripcion:hover {
+  background-color: var(--color-acento);
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+aside {
+    animation: slideInFromLeft 1.5s ease-in-out forwards;
+}
 
 @media screen and (max-width: 768px) {
     .contenedor {
-        grid-template-areas: "header       header      header"
-            "contenido     contenido   contenido"
-            "sidebar       sidebar     sidebar"
-            "footer        footer      footer";
-    }
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "contenido"
+      "sidebar"
+      "footer";
+  }
 }
