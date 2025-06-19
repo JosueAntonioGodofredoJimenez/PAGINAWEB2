@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>MI POP MARKET</title>
 </head>
 
@@ -12,53 +14,68 @@
 
     <section class="contenedor">
         <header class="header">
-            <h1 class="header__titulo">Página interactiva</h1>
+            <img src="MI POP MARKET.jpg" alt="Logo de MI POP MARKET" class="header__logo">
+            <h1 class="header__titulo">MI POP MARKET</h1>
         </header>
         <nav class="nav">
-            <figure class="nav__figura">
-
-                <img src=" https://via.placeholder.com/150" alt="logo de marca">
-                <figcaption class="nav__figcaption">descripcion de la imagen aqui</figcaption>
-            </figure>
-
+            <ul class="nav__menu">
+                <li><a href="#presentacion">Presentación</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
         </nav>
         <main class="main">
 
 
             <section class="presentacion">
                 <article class="portada__articulo">
-                    <h2 class="articulo__titulo"></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quaerat laudantium minus
-                        dolorum porro assumenda labore, repellat modi consequuntur aspernatur repudiandae ipsa omnis
-                        amet, veritatis harum, enim animi id dolore.</p>
+                    <h2 class="articulo__titulo">Presentación</h2>
+                    <p>Mi POP MARKET busca resaltar las obras que se crean los artistas de la actualidad, presentnado los productos coleccionables de diseños populares contando con una gran calidad.</p>
                 </article>
-                <br><br>
             </section>
 
             <section class="catalogo">
                 <article class="catalogo__articulo">
                     <h2 class="catalogo__titulo">Catálogo</h2>
-                    <p class="catalogo__descripcion">Productos dentro del catalago</p>
+                    <p class="catalogo__descripcion">Productos del catálogo</p>
 
                     <div class="catalogo__grid">
                         <div class="producto">
-                            <img src="https://via.placeholder.com/150" alt="Producto 1">
-                            <p>Producto 1</p>
+                            <img src="minion.jpg" alt="Minion" class="producto__imagen">
+                            <p class="producto__nombre">Minion space</p>
+                            <p class="producto__precio">S/15.99</p>
                         </div>
                         <div class="producto">
-                            <img src="https://via.placeholder.com/150" alt="Producto 2">
-                            <p>Producto 2</p>
+                            <img src="mega space molly.jpg" alt="Mega space Molly" class="producto__imagen">
+                            <p class="producto__nombre">Molly mega space</p>
+                            <p class="producto__precio">S/25.50</p>
                         </div>
                         <div class="producto">
-                            <img src="https://via.placeholder.com/150" alt="Producto 3">
-                            <p>Producto 3</p>
+                            <img src="osito cariñosito.jpg" alt="Osito cariñosito" class="producto__imagen">
+                            <p class="producto__nombre">Osito rosado</p>
+                            <p class="producto__precio">S/22.50</p>
                         </div>
                         <div class="producto">
-                            <img src="https://via.placeholder.com/150" alt="Producto 4">
-                            <p>Producto 4</p>
+                            <img src="THE MONSTERS Wacky Mart llavero.jpg" alt="THE MONSTERS Wacky"
+                                class="producto__imagen">
+                            <p class="producto__nombre">The monster Wacky</p>
+                            <p class="producto__precio">S/9.99</p>
+                        </div>
+
+                        <div class="producto">
+                            <img src="HACIPUPU Gummy Bear.jpg" alt="HACIPUPU Gummy Bear" class="producto__imagen">
+                            <p class="producto__nombre">Gummy bear HACIPUPU</p>
+                            <p class="producto__precio">S/20.99</p>
+                        </div>
+
+                        <div class="producto">
+                            <img src="Harry Potter POP CUBE-1 Series Figures.jpg"
+                                alt="Harry Potter POP CUBE-1 Series Figures" class="producto__imagen">
+                            <p class="producto__nombre">Figura de harry potter - POP CUBE</p>
+                            <p class="producto__precio">S/35.99</p>
                         </div>
                     </div>
-
+                    <br><br>
 
                     <button class="boton__descripcion">Ver más</button>
 
@@ -68,8 +85,10 @@
 
             <section class="contacto">
                 <article class="contacto__articulo">
-                    <h2 class="contacto__titulo">Contacto</h2>
-                    <p class="contacto__info">Información de contacto</p>
+                    <h2 class="contacto__titulo">Contáctanos</h2>
+                    <p class="contacto__info">Información de contacto
+                        Número telefónico: + 51 926109810
+                    </p>
                 </article>
                 <br><br>
             </section>
@@ -77,7 +96,8 @@
 
 
         <aside class="sidebar">
-            <h2>aside</h2>
+            <h2 class="sidebar__titulo">SÍGUENOS</h2>
+            <p class="sidebar__descripcion">En nuestras redes sociales</p>
         </aside>
 
 
@@ -86,6 +106,9 @@
             <p><button><a href="#header" class="volver-arriba">Volver arriba</a></button></p>
         </footer>
     </section>
+</body>
+
+</html>
 </body>
 
 </html>
