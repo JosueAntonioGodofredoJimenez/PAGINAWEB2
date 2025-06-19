@@ -24,7 +24,7 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
     min-height: 100vh;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: start;
 }
